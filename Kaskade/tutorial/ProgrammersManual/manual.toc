@@ -1,0 +1,84 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
+\contentsline {section}{\numberline {2}Structure and Implementation}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Finite Element Spaces}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Problem Formulation}{7}{subsection.2.2}
+\contentsline {paragraph}{Hint.}{9}{section*.2}
+\contentsline {subsection}{\numberline {2.3}Assembly}{9}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Adaptivity}{10}{subsection.2.4}
+\contentsline {paragraph}{Embedded error estimator.}{10}{section*.3}
+\contentsline {paragraph}{Hierarchic error estimator.}{10}{section*.4}
+\contentsline {paragraph}{Grid transfer.}{11}{section*.5}
+\contentsline {subsection}{\numberline {2.5}Time-dependent Problems}{11}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Nonlinear Solvers}{12}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Module interaction}{14}{subsection.2.7}
+\contentsline {section}{\numberline {3}Installation and code structure}{14}{section.3}
+\contentsline {subsection}{\numberline {3.1}Obtaining \textsc {Kaskade7 }and third-party software}{14}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Structure of the program}{16}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Compiler und Libraries}{16}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Using the make command}{17}{subsection.3.4}
+\contentsline {paragraph}{Makefile.Local.}{17}{section*.6}
+\contentsline {paragraph}{make in the KASKADE directory.}{17}{section*.7}
+\contentsline {paragraph}{make in subdirectory.}{18}{section*.8}
+\contentsline {subsection}{\numberline {3.5}Examples}{18}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Testing}{18}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Communication with svn repository}{19}{subsection.3.7}
+\contentsline {section}{\numberline {4}External libraries}{20}{section.4}
+\contentsline {section}{\numberline {5}Documentation online}{23}{section.5}
+\contentsline {section}{\numberline {6}Getting started}{23}{section.6}
+\contentsline {subsection}{\numberline {6.1}A very first example: simplest stationary heat transfer}{23}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Example: stationary heat transfer}{32}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}A walk through the main program}{33}{subsubsection.6.2.1}
+\contentsline {paragraph}{Preliminaries.}{33}{section*.9}
+\contentsline {paragraph}{Defining the grid.}{35}{section*.10}
+\contentsline {paragraph}{Function spaces and variable sets.}{35}{section*.11}
+\contentsline {paragraph}{Using functionals.}{37}{section*.12}
+\contentsline {paragraph}{Assembling.}{37}{section*.13}
+\contentsline {paragraph}{Solving.}{38}{section*.14}
+\contentsline {paragraph}{Output.}{42}{section*.15}
+\contentsline {subsubsection}{\numberline {6.2.2}Defining the functional}{44}{subsubsection.6.2.2}
+\contentsline {paragraph}{The template for the functional framework.}{44}{section*.16}
+\contentsline {paragraph}{The domain cache.}{45}{section*.17}
+\contentsline {paragraph}{The boundary cache.}{47}{section*.18}
+\contentsline {paragraph}{The remainings.}{48}{section*.19}
+\contentsline {paragraph}{computing time.}{49}{section*.20}
+\contentsline {subsection}{\numberline {6.3}Example: Artificial Test Problem (atp)}{50}{subsection.6.3}
+\contentsline {paragraph}{Defining the grid.}{51}{section*.21}
+\contentsline {paragraph}{The remaining.}{51}{section*.22}
+\contentsline {subsection}{\numberline {6.4}Example: using embedded error estimation}{54}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Example: using hierarchical error estimation}{58}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Example: SST pollution}{62}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Example: Stokes equation}{64}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}Example: Elasticity}{64}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.9}Example: Instationary heat tranfer}{65}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.10}Example: Navier-Stokes equations}{69}{subsection.6.10}
+\contentsline {section}{\numberline {7}Parameter administration}{70}{section.7}
+\contentsline {subsection}{\numberline {7.1}Introduction}{70}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Implementation in \textsc {Kaskade7 }}{70}{subsection.7.2}
+\contentsline {paragraph}{Static parameters.}{72}{section*.23}
+\contentsline {paragraph}{Dynamic parameters.}{73}{section*.24}
+\contentsline {section}{\numberline {8}Grid types}{75}{section.8}
+\contentsline {section}{\numberline {9}Linear solvers}{75}{section.9}
+\contentsline {subsection}{\numberline {9.1}Direct solvers}{75}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Iterative solvers, preconditioners}{76}{subsection.9.2}
+\contentsline {section}{\numberline {10}Miscellaneous}{77}{section.10}
+\contentsline {subsection}{\numberline {10.1}Coding Style}{77}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Measurement of cpu time}{78}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Namespaces}{79}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Multithreading}{79}{subsection.10.4}
+\contentsline {subsection}{\numberline {10.5}Special aspects of the \textsc {Dune}\xspace grid interface}{79}{subsection.10.5}
+\contentsline {section}{\numberline {11}Details in C++ implementation}{81}{section.11}
+\contentsline {subsection}{\numberline {11.1}Smart pointers (\tt {std::unique\_ptr})}{81}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Fusion vectors ({\tt boost::fusion::vector})}{81}{subsection.11.2}
+\contentsline {section}{\numberline {12}The dos and don'ts -- best practice}{82}{section.12}
+\contentsline {section}{\numberline {13}Modules}{83}{section.13}
+\contentsline {subsection}{\numberline {13.1}Differential operator library}{83}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Deforming grid manager}{84}{subsection.13.2}
+\contentsline {subsubsection}{\numberline {13.2.1}Motivation}{84}{subsubsection.13.2.1}
+\contentsline {subsubsection}{\numberline {13.2.2}Getting started}{85}{subsubsection.13.2.2}
+\contentsline {subsubsection}{\numberline {13.2.3}Advanced usage}{87}{subsubsection.13.2.3}
+\contentsline {section}{\numberline {14}Gallery of projects}{87}{section.14}
+\contentsline {subsection}{\numberline {14.1}Hyperthermia}{87}{subsection.14.1}
+\contentsline {section}{\numberline {15}History of \textsc {Kaskade7 }versions}{87}{section.15}
+\contentsline {subsection}{\numberline {15.1}\textsc {Kaskade7.0} $\succ $ \textsc {Kaskade7.1}}{87}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}\textsc {Kaskade7.1} $\succ $ \textsc {Kaskade7.2}}{87}{subsection.15.2}
+\contentsline {section}{\numberline {16}\textsc {Kaskade7 }publications}{88}{section.16}
