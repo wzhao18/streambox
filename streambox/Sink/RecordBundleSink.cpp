@@ -29,6 +29,21 @@ void RecordBundleSink<long>::printBundle
 #endif
 }
 
+template<>
+void RecordBundleSink<temporal_event>::printBundle
+	(const RecordBundle<temporal_event> & input_bundle) {
+		
+	stringstream record_bundle_info_s;
+	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	cout << record_bundle_info_s.str();
+
+    // for (auto && rec : input_bundle.content) {
+	// 	stringstream record_info_s;
+    //     record_info_s << "[" << rec.ts << "]: { dur: " << rec.data.dur << ", payload: " << rec.data.payload << "}" << "\n";
+    //     cout << record_info_s.str();
+    // }
+}
+
 /* for tweet (tvpair sink) */
 template<>
 void RecordBundleSink<creek::tvpair>::printBundle
@@ -156,6 +171,10 @@ void RecordBundleSink<vector<creek::string>>::ExecEvaluator(
 /* for grep */
 template
 void RecordBundleSink<creek::string>::ExecEvaluator(
+		int nodeid, EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
+
+template
+void RecordBundleSink<temporal_event>::ExecEvaluator(
 		int nodeid, EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
 /*
 template

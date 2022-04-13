@@ -24,7 +24,6 @@ public:
         shared_ptr<OutputBundleT> output_bundle) override {
 
     TransformT::printBundle(*input_bundle);
-
     return false; /* no output bundle */
   }
 };

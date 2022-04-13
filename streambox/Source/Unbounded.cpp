@@ -41,4 +41,3 @@ void UnboundedInMem<long, RecordBitmapBundle>
 			::ExecEvaluator(int nodeid,
 					EvaluationBundleContext *c,
 					shared_ptr<BundleBase> bundle_ptr);
-

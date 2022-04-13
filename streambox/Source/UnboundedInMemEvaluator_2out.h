@@ -1,6 +1,9 @@
 #ifndef TWITTEREVALUATE_H
 #define TWITTEREVALUATE_H 
 
+#include "Source/Unbounded.h"
+#include "UnboundedInMemEvaluatorBase.h"
+
 //hym: this is for UnboundedInMemTweets
 //     emit 2 same output streams
 //     include this file in UnboundedInMemEvaluator.h

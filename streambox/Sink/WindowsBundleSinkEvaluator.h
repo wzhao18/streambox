@@ -26,7 +26,7 @@ public:
         shared_ptr<InputBundleT> input_bundle,
         shared_ptr<OutputBundleT> output_bundle) override {
 
-    //XXX TransformT::printBundle(*input_bundle);
+    TransformT::printBundle(*input_bundle);
     //TransformT::report_progress(* input_bundle);
     return false; /* no output bundle */
   }

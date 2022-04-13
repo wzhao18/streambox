@@ -9,7 +9,6 @@ template<>
 void WindowsBundleSink<pair<creek::string, long>>::printBundle
 	(const WindowsBundle<pair<creek::string, long>> & input_bundle) {
     W("got one bundle: ");
-#ifndef NDEBUG
     for (auto && win_frag: input_bundle.vals) {
     	auto && win = win_frag.first;
     	auto && pfrag = win_frag.second;
@@ -20,7 +19,6 @@ void WindowsBundleSink<pair<creek::string, long>>::printBundle
     	}
     	cout << "----------------" << endl;
     }
-#endif
 }
 
 

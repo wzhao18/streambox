@@ -1097,4 +1097,5 @@ public:
     return new BoundedCol2<T1,T2>(name, source);
   }
 };
+
 #endif /* READ_H_ */
