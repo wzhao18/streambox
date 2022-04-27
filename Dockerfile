@@ -43,9 +43,9 @@ RUN cd /home/re2 && \
 RUN cd /home/streambox && \
     mkdir _build && \
     cd _build && \
-    cmake && \
-        -DCMAKE_BUILD_TYPE=Release && \
-        -DCMAKE_CXX_FLAGS="-std=c++11" && \
-        -G "CodeBlocks - Unix Makefiles" && \
+    cmake \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS="-std=c++11" \
+        -G "CodeBlocks - Unix Makefiles" \
         .. && \
     make -j$(nproc)

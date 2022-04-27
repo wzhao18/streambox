@@ -2166,6 +2166,11 @@ struct RecordBitmapBundle : public RecordBundle<T>
 				long rtt;
 			};
 
+			struct temporal_event {
+				uint64_t dur;
+				float payload;
+			};
+
 			/////////////////////////////////////////////////////////
 
 			/* an array of set for fixing the scalability bottleneck in a single set.
