@@ -51,6 +51,16 @@ void RecordBundleSink<pair<long, vector<long>>>::printBundle
 	stringstream record_bundle_info_s;
 	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
 	cout << record_bundle_info_s.str();
+
+	// for (auto && rec : input_bundle.content) {
+	// 	stringstream record_info_s;
+	// 	record_info_s << "Key: " << rec.data.first << " Values: [";
+	// 	for (long val : rec.data.second) {
+	// 			record_info_s << val << " ";
+	// 	}
+	// 	record_info_s << "]\n";
+	// 	cout << record_info_s.str();
+	// }
 }
 
 /* for tweet (tvpair sink) */
