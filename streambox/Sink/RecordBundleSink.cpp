@@ -30,6 +30,22 @@ void RecordBundleSink<long>::printBundle
 }
 
 template<>
+void RecordBundleSink<float>::printBundle
+	(const RecordBundle<float> & input_bundle) {
+	
+	stringstream record_bundle_info_s;
+	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	cout << record_bundle_info_s.str();
+
+	// for (auto && rec : input_bundle.content) {
+	// 	stringstream record_info_s;
+    //     record_info_s << "[" << rec.ts << "]: " << rec.data << "\n";
+    //     cout << record_info_s.str();
+    // }
+
+}
+
+template<>
 void RecordBundleSink<temporal_event>::printBundle
 	(const RecordBundle<temporal_event> & input_bundle) {
 
@@ -39,7 +55,7 @@ void RecordBundleSink<temporal_event>::printBundle
 
     // for (auto && rec : input_bundle.content) {
 	// 	stringstream record_info_s;
-    //     record_info_s << "[" << rec.ts << "]: { dur: " << rec.data.dur << ", payload: " << rec.data.payload << "}" << "\n";
+    //     record_info_s << "[" << rec.ts << "]: { dur: " << rec.data.dur << ", payload: " << rec.data.payload << " }" << "\n";
     //     cout << record_info_s.str();
     // }
 }
@@ -243,4 +259,8 @@ void RecordBundleSink<pair<long, vector<long>>>::ExecEvaluator(
 
 template
 void RecordBundleSink<temporal_event>::ExecEvaluator(
+		int nodeid, EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
+
+template
+void RecordBundleSink<float>::ExecEvaluator(
 		int nodeid, EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
