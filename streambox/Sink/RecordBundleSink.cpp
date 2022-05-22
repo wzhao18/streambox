@@ -55,7 +55,7 @@ void RecordBundleSink<temporal_event>::printBundle
 
     // for (auto && rec : input_bundle.content) {
 	// 	stringstream record_info_s;
-    //     record_info_s << "[" << rec.ts << "]: { dur: " << rec.data.dur << ", payload: " << rec.data.payload << " }" << "\n";
+    //     record_info_s << "[" << rec.ts << "]: { dur: " << rec.data.dur << ", payload: " << rec.data.payload << "}" << "\n";
     //     cout << record_info_s.str();
     // }
 }
@@ -73,6 +73,25 @@ void RecordBundleSink<pair<long, vector<long>>>::printBundle
 	// 	record_info_s << "Key: " << rec.data.first << " Values: [";
 	// 	for (long val : rec.data.second) {
 	// 			record_info_s << val << " ";
+	// 	}
+	// 	record_info_s << "]\n";
+	// 	cout << record_info_s.str();
+	// }
+}
+
+template<>
+void RecordBundleSink<pair<long, vector<temporal_event>>>::printBundle
+	(const RecordBundle<pair<long, vector<temporal_event>>> & input_bundle) {
+
+	stringstream record_bundle_info_s;
+	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	cout << record_bundle_info_s.str();
+
+	// for (auto && rec : input_bundle.content) {
+	// 	stringstream record_info_s;
+	// 	record_info_s << "Key: " << rec.data.first << " Values: [";
+	// 	for (auto event : rec.data.second) {
+	// 		record_info_s << "{ dur: " << event.dur << ", payload: " << event.payload << " } ";
 	// 	}
 	// 	record_info_s << "]\n";
 	// 	cout << record_info_s.str();
@@ -263,4 +282,8 @@ void RecordBundleSink<temporal_event>::ExecEvaluator(
 
 template
 void RecordBundleSink<float>::ExecEvaluator(
+		int nodeid, EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
+
+template
+void RecordBundleSink<pair<long, vector<temporal_event>>>::ExecEvaluator(
 		int nodeid, EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);

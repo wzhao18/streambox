@@ -944,8 +944,16 @@ public:
 			} else {
 				Join<pair<long, long>, RecordBundle, RecordBundle>* jt1
 										= dynamic_cast<Join<pair<long, long>, RecordBundle, RecordBundle> *>(*it);
-				xzl_bug_on(!jt1);  /* what types can Join be? */
+				// xzl_bug_on(!jt1);  /* what types can Join be? */
 				bundleptr = jt1->getOneBundle(node);
+
+				// Hardcode the third type of Join
+				if (!jt1) {
+					Join<pair<long, temporal_event>, RecordBundle, RecordBundle>* jt2
+										= dynamic_cast<Join<pair<long, temporal_event>, RecordBundle, RecordBundle> *>(*it);
+					xzl_bug_on(!jt2);
+					bundleptr = jt1->getOneBundle(node);
+				}
 			}
 			//auto bundleptr = jt->getOneBundleOlderThan(target_wm_, &has_pending_punc, node);
 //			bundleptr = jt->getOneBundle(node);

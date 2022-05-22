@@ -45,3 +45,7 @@ void Join<std::pair<long, long>, RecordBitmapBundle, RecordBitmapBundle>::ExecEv
 template
 void Join<std::pair<long, long>, RecordBundle, RecordBundle>::ExecEvaluator(int nodeid,
 	EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
+
+template
+void Join<std::pair<long, temporal_event>, RecordBundle, RecordBundle>::ExecEvaluator(int nodeid,
+        EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
