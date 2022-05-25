@@ -2171,6 +2171,17 @@ struct RecordBitmapBundle : public RecordBundle<T>
 				float payload;
 			};
 
+			struct yahoo_event {
+				long user_id;
+        		long campaign_id;
+        		long event_type;
+			};
+
+			struct yahoo_event_projected {
+        		long campaign_id;
+        		long event_type;
+			};
+
 			/////////////////////////////////////////////////////////
 
 			/* an array of set for fixing the scalability bottleneck in a single set.

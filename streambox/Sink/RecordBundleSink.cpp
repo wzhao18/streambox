@@ -42,7 +42,37 @@ void RecordBundleSink<float>::printBundle
     //     record_info_s << "[" << rec.ts << "]: " << rec.data << "\n";
     //     cout << record_info_s.str();
     // }
+}
 
+template<>
+void RecordBundleSink<yahoo_event_projected>::printBundle
+	(const RecordBundle<yahoo_event_projected> & input_bundle) {
+	
+	stringstream record_bundle_info_s;
+	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	cout << record_bundle_info_s.str();
+
+	for (auto && rec : input_bundle.content) {
+		stringstream record_info_s;
+        record_info_s << "[" << rec.ts << "]: { event_type: " << rec.data.event_type;
+		record_info_s << ", campaign_id: " << rec.data.campaign_id << " }" << "\n";
+        cout << record_info_s.str();
+    }
+}
+
+template<>
+void RecordBundleSink<uint64_t>::printBundle
+	(const RecordBundle<uint64_t> & input_bundle) {
+	
+	stringstream record_bundle_info_s;
+	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	cout << record_bundle_info_s.str();
+
+	for (auto && rec : input_bundle.content) {
+		stringstream record_info_s;
+        record_info_s << "[" << rec.ts << "]: Count: " << rec.data << "\n";
+        cout << record_info_s.str();
+    }
 }
 
 template<>
@@ -53,11 +83,11 @@ void RecordBundleSink<temporal_event>::printBundle
 	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
 	cout << record_bundle_info_s.str();
 
-    // for (auto && rec : input_bundle.content) {
-	// 	stringstream record_info_s;
-    //     record_info_s << "[" << rec.ts << "]: { dur: " << rec.data.dur << ", payload: " << rec.data.payload << "}" << "\n";
-    //     cout << record_info_s.str();
-    // }
+    for (auto && rec : input_bundle.content) {
+		stringstream record_info_s;
+        record_info_s << "[" << rec.ts << "]: { dur: " << rec.data.dur << ", payload: " << rec.data.payload << " }" << "\n";
+        cout << record_info_s.str();
+    }
 }
 
 template<>
@@ -68,15 +98,15 @@ void RecordBundleSink<pair<long, vector<long>>>::printBundle
 	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
 	cout << record_bundle_info_s.str();
 
-	// for (auto && rec : input_bundle.content) {
-	// 	stringstream record_info_s;
-	// 	record_info_s << "Key: " << rec.data.first << " Values: [";
-	// 	for (long val : rec.data.second) {
-	// 			record_info_s << val << " ";
-	// 	}
-	// 	record_info_s << "]\n";
-	// 	cout << record_info_s.str();
-	// }
+	for (auto && rec : input_bundle.content) {
+		stringstream record_info_s;
+		record_info_s << "Key: " << rec.data.first << " Values: [ ";
+		for (long val : rec.data.second) {
+				record_info_s << val << " ";
+		}
+		record_info_s << "]\n";
+		cout << record_info_s.str();
+	}
 }
 
 template<>
@@ -286,4 +316,12 @@ void RecordBundleSink<float>::ExecEvaluator(
 
 template
 void RecordBundleSink<pair<long, vector<temporal_event>>>::ExecEvaluator(
+		int nodeid, EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
+
+template
+void RecordBundleSink<yahoo_event_projected>::ExecEvaluator(
+		int nodeid, EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
+
+template
+void RecordBundleSink<uint64_t>::ExecEvaluator(
 		int nodeid, EvaluationBundleContext *c, shared_ptr<BundleBase> bundle_ptr);
