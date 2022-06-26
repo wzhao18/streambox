@@ -741,7 +741,7 @@ public:
   ptime AdvanceTargetWm() {
   	boost::unique_lock<boost::shared_mutex> wlock(target_wm_mutex_);
   	target_wm_ += target_wm_delta_;
-  	VV("target_wm set to %s", to_simplest_string(target_wm_).c_str());
+  	//VV("target_wm set to %s", to_simplest_string(target_wm_).c_str());
   	return target_wm_;
   }
 
@@ -754,7 +754,7 @@ public:
 //  	assert(t > target_wm_ && "must advance monotonically");
   	boost::unique_lock<boost::shared_mutex> wlock(target_wm_mutex_);
   	target_wm_ = t;
-  	EE("----> target_wm set to %s", to_simple_string(target_wm_).c_str());
+  	//EE("----> target_wm set to %s", to_simple_string(target_wm_).c_str());
   	//VV("----> target_wm set to %s", to_simple_string(target_wm_).c_str());
   }
 

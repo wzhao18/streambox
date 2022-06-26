@@ -33,9 +33,9 @@ template<>
 void RecordBundleSink<float>::printBundle
 	(const RecordBundle<float> & input_bundle) {
 	
-	stringstream record_bundle_info_s;
-	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
-	cout << record_bundle_info_s.str();
+	// stringstream record_bundle_info_s;
+	// record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	// cout << record_bundle_info_s.str();
 
 	// for (auto && rec : input_bundle.content) {
 	// 	stringstream record_info_s;
@@ -48,9 +48,9 @@ template<>
 void RecordBundleSink<yahoo_event_projected>::printBundle
 	(const RecordBundle<yahoo_event_projected> & input_bundle) {
 	
-	stringstream record_bundle_info_s;
-	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
-	cout << record_bundle_info_s.str();
+	// stringstream record_bundle_info_s;
+	// record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	// cout << record_bundle_info_s.str();
 
 	// for (auto && rec : input_bundle.content) {
 	// 	stringstream record_info_s;
@@ -64,9 +64,9 @@ template<>
 void RecordBundleSink<uint64_t>::printBundle
 	(const RecordBundle<uint64_t> & input_bundle) {
 	
-	stringstream record_bundle_info_s;
-	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
-	cout << record_bundle_info_s.str();
+	// stringstream record_bundle_info_s;
+	// record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	// cout << record_bundle_info_s.str();
 
 	// for (auto && rec : input_bundle.content) {
 	// 	stringstream record_info_s;
@@ -79,9 +79,9 @@ template<>
 void RecordBundleSink<temporal_event>::printBundle
 	(const RecordBundle<temporal_event> & input_bundle) {
 
-	stringstream record_bundle_info_s;
-	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
-	cout << record_bundle_info_s.str();
+	// stringstream record_bundle_info_s;
+	// record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	// cout << record_bundle_info_s.str();
 
     // for (auto && rec : input_bundle.content) {
 	// 	stringstream record_info_s;
@@ -94,9 +94,9 @@ template<>
 void RecordBundleSink<pair<long, vector<long>>>::printBundle
 	(const RecordBundle<pair<long, vector<long>>> & input_bundle) {
 
-	stringstream record_bundle_info_s;
-	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
-	cout << record_bundle_info_s.str();
+	// stringstream record_bundle_info_s;
+	// record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	// cout << record_bundle_info_s.str();
 
 	// for (auto && rec : input_bundle.content) {
 	// 	stringstream record_info_s;
@@ -113,9 +113,9 @@ template<>
 void RecordBundleSink<pair<long, vector<temporal_event>>>::printBundle
 	(const RecordBundle<pair<long, vector<temporal_event>>> & input_bundle) {
 
-	stringstream record_bundle_info_s;
-	record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
-	cout << record_bundle_info_s.str();
+	// stringstream record_bundle_info_s;
+	// record_bundle_info_s << "Got one bundle: size: " << input_bundle.content.size() << "\n";
+	// cout << record_bundle_info_s.str();
 
 	// for (auto && rec : input_bundle.content) {
 	// 	stringstream record_info_s;
