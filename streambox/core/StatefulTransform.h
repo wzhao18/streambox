@@ -370,7 +370,7 @@ public:
 //							WindowResultT acc;
 //							TransformT::aggregate_init(&acc);
 							long delta = max(index - s + 1, partial_results_grow_);
-							EE("grow internal state, delta=%lu", delta);
+//							EE("grow internal state, delta=%lu", delta);
 //							partial_results_.grow_by(delta, acc); /* copy ctor for the new items */
 //							partial_results_.resize(s + delta, acc);
 							partial_results_.resize(s + delta);

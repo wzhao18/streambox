@@ -682,7 +682,7 @@ public:
 		ostringstream oss;
 		vector<cont_info> cnts;
 		this->getNumBundlesTs(&cnts);
-		//  	oss << "deposit to: " << this->name << "\n (bundles: ";
+		oss << "deposit to: " << this->name << "\n (bundles: ";
 		oss << this->name << " (bundles: ";
 		for (auto & cnt : cnts) {
 			if (cnt.bundle >= 0)
@@ -1246,7 +1246,7 @@ okay:
 	ostringstream oss;
   	vector<cont_info> cnts;
   	this->getNumBundlesTs(&cnts);
-	oss << "deposit to: " << this->name << "\n (bundles: ";
+//	oss << "deposit to: " << this->name << "\n (bundles: ";
   	for (auto & cnt : cnts) {
   		if (cnt.bundle >= 0)
   			oss << cnt.bundle << " ";
@@ -1329,7 +1329,7 @@ public:
 			}
   	}
   	oss << ")";
-  	punc->mark(oss.str());
+//  	punc->mark(oss.str());
 //  	punc->mark("deposit to: " + this->name);
 #endif
     /* fast path: rlock only, check whether containers need maintenance; if not,

@@ -22,7 +22,7 @@
 //	#define USE_NUMA_ALLOC 1 /* numa-aware allocation. using Kaskade::Kalloc */
 
 	#define INPUT_ALWAYS_ON_NODE0	1 /* input queue only for node0, i.e no numa? */
-	#define MEASURE_LATENCY	1
+//	#define MEASURE_LATENCY	1
 
 #else  /* debug build */
 	#define DEBUG 	/* make code easier... */

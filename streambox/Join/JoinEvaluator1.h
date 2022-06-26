@@ -584,7 +584,7 @@ public:
 				
 				if(pv_l->punc->min_ts > pv_r->punc->min_ts) { /* right container moved to ordered */
 					pv_r->punc->mark("before splice: right" + to_simple_string(boost::posix_time::microsec_clock::local_time()));
-					pv_r->punc->dump_markers();
+					//pv_r->punc->dump_markers();
 					/* todo: add "move" marker XXX */
 					out->consumer->ordered_containers.splice(
 							out->consumer->ordered_containers.begin(),
@@ -630,7 +630,7 @@ public:
 				} else { /* left container moved to ordered */
 					// pv_l->punc->min_ts <= pv_r->punc->min_ts
 					pv_l->punc->mark("before splice: left" + to_simple_string(boost::posix_time::microsec_clock::local_time()));
-					pv_l->punc->dump_markers();
+					//pv_l->punc->dump_markers();
 					out->consumer->ordered_containers.splice(
 							out->consumer->ordered_containers.begin(),
 							out->consumer->left_unordered_containers,
@@ -681,7 +681,7 @@ public:
 				if(pv_l->punc->min_ts <= out->consumer->right_wm){
 					//hym:  move left container to ordered
 					pv_l->punc->mark("before splice: left" + to_simple_string(boost::posix_time::microsec_clock::local_time()));
-					pv_l->punc->dump_markers();
+					//pv_l->punc->dump_markers();
 					out->consumer->ordered_containers.splice(
 							out->consumer->ordered_containers.begin(),
 							out->consumer->left_unordered_containers,
@@ -736,7 +736,7 @@ public:
 					//hym: move right container to ordered
 					/* todo: add "move" marker XXX */
 					pv_r->punc->mark("before splice: right" + to_simple_string(boost::posix_time::microsec_clock::local_time()));
-					pv_r->punc->dump_markers();
+					//pv_r->punc->dump_markers();
 					out->consumer->ordered_containers.splice(
 							out->consumer->ordered_containers.begin(),
 							out->consumer->right_unordered_containers,
