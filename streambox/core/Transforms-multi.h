@@ -1987,7 +1987,7 @@ deposit:
 
         		if (!it->downstream) {
         			miss = true;
-      			//std::cout << __FILE__ << ": " <<  __LINE__ << std::endl;
+      			// std::cout << __FILE__ << ": " <<  __LINE__ << std::endl;
         			/* alloc & link downstream container. NB: it->downstream is an atomic
         			 * pointer, so it implies a fence here. */
         			downt->unordered_containers.emplace_front();
@@ -2101,7 +2101,7 @@ deposit:
 
         		if (!it->downstream) {
         			miss = true;
-      			std::cout << __FILE__ << ": " <<  __LINE__ << std::endl;
+      			//std::cout << __FILE__ << ": " <<  __LINE__ << std::endl;
         			/* alloc & link downstream container. NB: it->downstream is an atomic
         			 * pointer, so it implies a fence here. */
         			downt->ordered_containers.emplace_front();

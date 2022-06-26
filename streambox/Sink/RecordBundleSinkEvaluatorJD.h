@@ -63,10 +63,10 @@ public:
 		//hym: update trans' left_wm or right_wm
 		if(punc->get_side_info() == 1){
 			trans->left_wm = punc->min_ts;
-			std::cout << "First sink receive a punc from left---------------" << std::endl;
+			//std::cout << "First sink receive a punc from left---------------" << std::endl;
 		}else if(punc->get_side_info() == 2){
 			trans->right_wm = punc->min_ts;
-			std::cout << "First sink receive a pun from right ++++++++++++++" << std::endl;
+			//std::cout << "First sink receive a pun from right ++++++++++++++" << std::endl;
 		}else{
 			assert(false && "Punc has wrong side info in Join's downstream");
 		}
@@ -99,7 +99,7 @@ public:
 		auto out = trans->getFirstOutput();
 		assert(out);
 
-		EE("---- called ------ ");
+		//EE("---- called ------ ");
 
 		/* at this time, the numa node of this eval must be determined. */
 		ASSERT_VALID_NUMA_NODE(this->_node);
