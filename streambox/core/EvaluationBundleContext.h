@@ -485,13 +485,13 @@ public:
 #endif
     executor_.StartThreads();
 
-    stat_collector_.start(3000 /* internal ms */,
-    		std::bind(&EvaluationBundleContext::getStatistics, this));
+    // stat_collector_.start(3000 /* internal ms */,
+    // 		std::bind(&EvaluationBundleContext::getStatistics, this));
 
     RunConsumer(begin, -1);
 //    sleep(3);
 
-    stat_collector_.stop();
+    // stat_collector_.stop();
     executor_.StopThreads();
   }
 
