@@ -526,7 +526,7 @@ restart:
 									wlock(this->mtx_partial_results_);
 
 				if (unflushed_ > partial_results_gc_) {
-					EE("GC start. #items=%ld", unflushed_.load());
+					//EE("GC start. #items=%ld", unflushed_.load());
 
 					if (unflushed_ == s) { /* empty internal state */
 						clear_start_win();
@@ -538,7 +538,7 @@ restart:
 					partial_results_.erase(partial_results_.begin(),
 							partial_results_.begin() + unflushed_);
 					unflushed_ = 0;
-					EE("GC done. #items=%ld", unflushed_.load());
+					//EE("GC done. #items=%ld", unflushed_.load());
 				}
   		}
   	} /* GC done */
@@ -688,7 +688,7 @@ restart:
 									wlock(this->mtx_partial_results_);
 
 				if (unflushed_ > partial_results_gc_) {
-					EE("GC start. #items=%ld", unflushed_.load());
+					//EE("GC start. #items=%ld", unflushed_.load());
 
 					if (unflushed_ == s) { /* empty internal state */
 						clear_start_win();
@@ -700,7 +700,7 @@ restart:
 					partial_results_.erase(partial_results_.begin(),
 							partial_results_.begin() + unflushed_);
 					unflushed_ = 0;
-					EE("GC done. #items=%ld", unflushed_.load());
+					//EE("GC done. #items=%ld", unflushed_.load());
 				}
   		}
   	} /* GC done */
